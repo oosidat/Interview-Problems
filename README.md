@@ -1,7 +1,7 @@
-Interview Problems
-==================
+Problem Solving
+===============
 
-A collection of coding problems encountered in interviews.
+My attempts at solving coding problems encountered in interviews, contest practices, and other random places.
 
 Python
 ------
