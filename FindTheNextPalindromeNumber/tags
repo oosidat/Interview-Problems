@@ -1,0 +1,14 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ConvertIntToString	arewethereyet.cc	/^string ConvertIntToString(int numberToConvert) {$/;"	f
+IsPalindrome	arewethereyet.cc	/^bool IsPalindrome(string testString){$/;"	f
+MAX_STRING_LENGTH	arewethereyet.cc	/^int MAX_STRING_LENGTH = 6;$/;"	v
+NextPalindromeNumber	arewethereyet.cc	/^int NextPalindromeNumber(int originalNumber) {$/;"	f
+RemoveLeadingZeroes	arewethereyet.cc	/^int RemoveLeadingZeroes(string numberString) {$/;"	f
+ReversedString	arewethereyet.cc	/^string ReversedString(string str) {$/;"	f
+ZeroPaddedString	arewethereyet.cc	/^string ZeroPaddedString(string unPaddedString) {$/;"	f
+main	arewethereyet.cc	/^int main() {$/;"	f

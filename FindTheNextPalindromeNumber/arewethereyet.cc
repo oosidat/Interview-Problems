@@ -13,7 +13,7 @@ string ConvertIntToString(int numberToConvert) {
     return result;
 }
 
-int RemoveLeadingZeroes(string numberString) {
+int ConvertStringToInt(string numberString) {
     int numberInt;
     stringstream (numberString) >> numberInt;
     return numberInt;
@@ -52,10 +52,37 @@ string ZeroPaddedString(string unPaddedString) {
     return result;
 }
 
+void ProduceDifferenceOutput(int caseCount, string inputString) {
+    
+    int distanceToPalindrome = 0;
+    
+    // Removing Zeroes, keeping a string version and an int version for calculations
+    int inputStringInt = ConvertStringToInt(inputString);
+    string zeroStrippedString = ConvertIntToString(inputStringInt);
+    string closestNextPalindrome;
+
+    if (IsPalindrome(zeroStrippedString)) {
+        closestNextPalindrome = inputString;
+    }
+    else {
+        int nextPalindrome = NextPalindromeNumber(inputStringInt);
+        distanceToPalindrome = nextPalindrome - inputStringInt;
+        closestNextPalindrome = ConvertIntToString(nextPalindrome);
+    }
+    cout << "Case " << caseCount << ": " << distanceToPalindrome << " miles to " << closestNextPalindrome << "." << endl;
+}
+
 
 int main() {
-    int inputstring;
-    cin >> inputstring;
-    cout << ZeroPaddedString(ConvertIntToString (NextPalindromeNumber(inputstring))) << endl;
-    return 0;
+    string inputString;
+    int caseCount = 1;
+    while (cin >> inputString) {
+        if (inputString == "-1") {
+            return 0;
+        }
+        else {
+            ProduceDifferenceOutput(caseCount, inputString);
+            caseCount++;
+        }
+    }
 }
