@@ -67,7 +67,7 @@ void ProduceDifferenceOutput(int caseCount, string inputString) {
     else {
         int nextPalindrome = NextPalindromeNumber(inputStringInt);
         distanceToPalindrome = nextPalindrome - inputStringInt;
-        closestNextPalindrome = ConvertIntToString(nextPalindrome);
+        closestNextPalindrome = ZeroPaddedString(ConvertIntToString(nextPalindrome));
     }
     cout << "Case " << caseCount << ": " << distanceToPalindrome << " miles to " << closestNextPalindrome << "." << endl;
 }
