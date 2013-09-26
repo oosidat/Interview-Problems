@@ -1,7 +1,21 @@
 #include <iostream>
 #include <string>
+#include <sstream>
 
 using namespace std;
+
+void InputsToArrayByLine(int *inputValuesArray, int k) {
+    string input;
+    getline(cin, input);
+    istringstream iss(input);
+    int temp;
+    int i = 0;
+    
+    while (iss >> temp) {
+        inputValuesArray[i] = temp;
+        i++;
+    }
+}
 
 void InputsToArray(int *inputValuesArray, int k) {
     int inputValue;
