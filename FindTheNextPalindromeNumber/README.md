@@ -6,6 +6,7 @@ This is an attempt to solve the ["Are We There Yet?" Problem ](https://icpcarchi
 Usage:
 ------ 
 `./arewethereyet [<< input >> output]`
+
 Terminated when '-1' is passed as input
 
 Input Restrictions: 6 digit numbers, padded by zero if necessary, OR -1, to terminate the program.
