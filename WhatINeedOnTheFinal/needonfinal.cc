@@ -19,8 +19,8 @@ int SumOfWeightedValues (int * arrayA, int * arrayB, int count) {
     return sumWeights;
 }
 
-int CalculateRequiredForFinal(int desiredAverage, int weightedSumOfOtherTests, int examWeight) {
-    return ( (100 * desiredAverage) - weightedSumOfOtherTests) / examWeight;
+int RequiredForFinal(int desiredAverage, int weightedSumOfOtherTests, int examWeight) {
+    return ( float (100 * desiredAverage) - weightedSumOfOtherTests) / float(examWeight);
 }
 
 // code from cplusplus.com
@@ -31,12 +31,10 @@ void printarray (int arg[], int length) {
     cout << endl;
 }
 
-int main() {
-    int requiredInFinal;
-    int desiredAverage;
+float CalculateCase(int desiredAverage) {
+    float requiredInFinal;
     int numberOfTests;
     int numberOfScores; // tests - 1
-    cin >> desiredAverage;
     cin >> numberOfTests;
     numberOfScores = numberOfTests - 1;
 
@@ -47,8 +45,31 @@ int main() {
     int examWeight = testWeights[numberOfScores];
 
     int weightedSumOfOtherTests = SumOfWeightedValues(testWeights, testScores, numberOfScores);
-    requiredInFinal = CalculateRequiredForFinal(desiredAverage, weightedSumOfOtherTests , examWeight);
+    requiredInFinal = RequiredForFinal(desiredAverage, weightedSumOfOtherTests , examWeight);
 
-    cout << requiredInFinal << endl;    
-    return 0;
+    return requiredInFinal;
 }
+
+int main() {
+    int desiredAverage;
+    int caseCount = 1;
+    while (cin >> desiredAverage) {
+        if (desiredAverage == -1) {
+            return 0;
+        } else {
+            float requiredInFinal = CalculateCase(desiredAverage);
+            cout << "Case " << caseCount << ": ";
+            if (requiredInFinal <= 100) {
+                cout << requiredInFinal;
+            }
+            else {cout << "impossible";}
+            cout << endl;
+        }
+        caseCount++;
+    }
+}
+
+
+
+
+    
