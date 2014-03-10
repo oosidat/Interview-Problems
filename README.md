@@ -11,3 +11,4 @@ Python
 ------
 - Find first non-repeating character in a string
 - Is an Input Number a Power of N?
+- Matrix Rotation
